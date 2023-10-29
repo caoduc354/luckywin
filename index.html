@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./publics/images/favicon.png" type="image/x-icon" />
+    <title>LuckyWin-giải trí thời trang</title>
+    <link rel="stylesheet" href="./publics/style/style.css">
+</head>
+<body>
+    <div id="main">
+        <header class="header">
+            <div class="content">
+                <div class="btn-hoat-dong" style="opacity: 0; cursor: default;">
+                </div>
+    
+                <div class="logo">
+                    <img src="./publics/images/logo-header.png" width="100%" alt="">
+                </div>
+    
+                <div class="btn-hoat-dong">
+                    <a href="#">
+                        <img src="./publics/images/hoat-dong-header.png" width="100%" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="nav">
+                <div class="background">
+                    <img src="./publics/images/background-nav.png" width="100%" alt="">
+                </div>
+                <div class="nav-content">
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/tat-ca-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/tat-ca-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/new-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/moi-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/noi-bat-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/noi-bat-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/slots-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/slots-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/casino-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/casino-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+
+                    <div class="item-nav-content">
+                        <a href="#">
+                            <img src="./publics/images/mini-game-def.png" width="100%" alt="" class="def">
+                            <img src="./publics/images/mini-game-ac.png" width="100%" alt="" class="act">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+
+        $(document).ready(function() {
+
+            $(".item-nav-content").click(function() {
+                $(".item-nav-content").removeClass("active");
+                $(this).addClass("active");
+            });
+            
+        });
+
+    </script>
+
+</body>
+</html>

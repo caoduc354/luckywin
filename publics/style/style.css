@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* HEADER START */
+
+.header{
+    height: min-content;
+    width: 100%;
+    background-image: url("../images/background-header.png");
+    background-repeat:no-repeat;
+}
+
+.header .content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header .logo{
+    width: 22%;
+}
+
+.header .btn-hoat-dong{
+    width: 6.5%;
+}
+
+/* HEADER END */
+
+/* MAIN START */
+
+.main{
+    height: max-content;
+    width: 100%;
+}
+
+.main .nav{
+    width: 18%;
+    position: relative;
+}
+
+.main .nav .nav-content{
+    width: 95%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main .nav .nav-content .item-nav-content{
+    position: relative;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main .nav .nav-content .item-nav-content .def{
+    width: 90%;
+    padding-left: 15px;
+}
+
+.main .nav .nav-content .item-nav-content .act{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.main .nav .nav-content .item-nav-content.active .act{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* MAIN END */

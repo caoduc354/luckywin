@@ -6,23 +6,27 @@
 #main{
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
     background-position: center;
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 /* HEADER START */
-
 .header{
     height: min-content;
+    max-height: 90px;
     width: 100%;
     background-image: url("../images/background-header.png");
     background-repeat:no-repeat;
+    background-size: cover
 }
 
 .header .content{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -30,11 +34,12 @@
 }
 
 .header .logo{
-    width: 22%;
+    width: 30%;
 }
 
 .header .btn-hoat-dong{
-    width: 6.5%;
+    width: 9%;
+    transform: translate(-41%, 2%);
 }
 
 /* HEADER END */
@@ -42,37 +47,45 @@
 /* MAIN START */
 
 .main{
-    height: max-content;
-    width: 100%;
-}
-
-.main .nav{
-    width: 18%;
     position: relative;
+    top: 0px;
+    left: 0;
+    right: 0;
+    /* bottom: 70px; */
+    display: flex;
+    background-image: url("../images/background.png");
 }
 
-.main .nav .nav-content{
-    width: 95%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+.nav{
+    width:17%;
+    min-width: 180px;
+    background-image: url("../images/background-nav.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 100%;
+}
+
+.nav-content{
+    width: 86%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .main .nav .nav-content .item-nav-content{
     position: relative;
-    height: 115px;
+    /* height: min-content; */
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
+    margin-top: 7px;
 }
 
-.main .nav .nav-content .item-nav-content .def{
+.main .nav .nav-content .item-nav-content img{
+    height: 100%;
     width: 90%;
-    padding-left: 15px;
 }
 
 .main .nav .nav-content .item-nav-content .act{
@@ -89,6 +102,163 @@
     opacity: 1;
     transition: 0.3s ease-in-out;
     z-index: 1;
+    width: 100%;
 }
 
+/* .main .content {
+    display: flex;
+    flex-direction: column;
+} */
+
+.notification {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.card-item {
+    position: relative;
+    width: 100%;
+}
+
+.card-item a {
+    position: absolute;
+    top: 7px;
+    left: -60px;
+    width: 100%;
+}
+
+/* .card-item img {
+    width: fit-content;
+} */
+
+.card-item img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-51%, 58%);
+    width: 57%; 
+}
+
+
 /* MAIN END */
+
+/*  FOOTER */
+.footer {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    position: relative;
+    background-image: url("../images/background.png");
+  }
+  
+  /* Định dạng các ảnh trong ".footer" */
+  
+  .image-left {
+    background-image: url("../images/jackpot-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 79%;
+    height: 100%;
+    background-position: right;
+  }
+  
+  .container-image-left {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    position: relative;
+  }
+  
+  .container-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .container-left {
+    display: flex;
+    justify-content: start;
+  }
+  
+  .container-right {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .image-left div {
+    width: 70%;
+  }
+  
+  .image-right img {
+    width: 22%;
+    height: 105%;
+    display: block;
+    margin: -22px 0;
+  }
+  
+  .avatar {
+    width: 27%;
+  }
+  
+  .container-avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+  }
+  
+  .image-right {
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url("../images/jackpot-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    right: 0;
+    width: 79%;
+    height: 100%;
+  }
+  
+  .image-center {
+    height: 100%;
+    width: 390px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .image-center img {
+    width: 100%; /* Kích thước ảnh theo chiều rộng */
+    height: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.text-image-left {
+    color: peachpuff;
+    /* position: absolute;
+    transform: translateX(-50%); */
+}
+  
+  /* Định dạng ảnh ở giữa */
+  .image-center .image {
+    width: 100%; /* Kích thước ảnh theo chiều rộng */
+    height: auto;
+    max-height: 100%;
+    object-fit: cover; /* Hiển thị ảnh với kích thước tỷ lệ bất kể kích thước của phần tử cha */
+  }
+  
+  /* FOOTER END */
+  

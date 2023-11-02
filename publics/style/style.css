@@ -17,8 +17,7 @@
 
 /* HEADER START */
 .header{
-    height: min-content;
-    max-height: 90px;
+    height: 11%;
     width: 100%;
     background-image: url("../images/background-header.png");
     background-repeat:no-repeat;
@@ -26,7 +25,7 @@
 }
 
 .header .content{
-    width: 100%;
+    width: 88%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -34,24 +33,46 @@
 }
 
 .header .logo{
-    width: 30%;
+    width: 32%;
+    transform: translateX(131px)
 }
 
-.header .btn-hoat-dong{
-    width: 9%;
-    transform: translate(-41%, 2%);
+.button-cskh {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Để đẩy btn-cskh và btn-hoat-dong về phía bên phải */
 }
+
+.button-cskh .btn-hoat-dong  {
+  width: 100%;
+  transform: translate(45%, -3%);
+}
+
+.button-cskh .btn-cskh{
+  width: 70%;
+  transform: translate(32%, -9%);
+}
+
+/* .header .btn-hoat-dong {
+  width: 9%;
+  transform: translate(64%, 5%);
+}
+
+.header .btn-cskh {
+  width: 9%;
+  transform: translate(-41%, 2%);
+} */
 
 /* HEADER END */
 
 /* MAIN START */
 
 .main{
+    height: 75%;
     position: relative;
     top: 0px;
     left: 0;
     right: 0;
-    /* bottom: 70px; */
     display: flex;
     background-image: url("../images/background.png");
 }
@@ -85,7 +106,7 @@
 
 .main .nav .nav-content .item-nav-content img{
     height: 100%;
-    width: 90%;
+    width: 100%;
 }
 
 .main .nav .nav-content .item-nav-content .act{
@@ -116,27 +137,22 @@
     margin-top: 18px;
 }
 
-.card {
-    display: flex;
-    position: relative;
-    width: 100%;
+.content {
+  overflow-x: auto;
 }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  transform: translate(0%, 15%);
+} 
 
 .card-item {
     position: relative;
-    width: 100%;
+    flex-basis: calc(20% - 20px); 
+    margin-right: 20px; 
 }
-
-.card-item a {
-    position: absolute;
-    top: 7px;
-    left: -60px;
-    width: 100%;
-}
-
-/* .card-item img {
-    width: fit-content;
-} */
 
 .card-item img:nth-child(2) {
     position: absolute;
@@ -152,14 +168,19 @@
 /*  FOOTER */
 .footer {
     width: 100%;
-    height: 13%;
+    height: 14%;
     display: flex;
     position: relative;
     background-image: url("../images/background.png");
   }
   
-  /* Định dạng các ảnh trong ".footer" */
-  
+  .container-image-left {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    position: relative;
+  }  
+
   .image-left {
     background-image: url("../images/jackpot-1.png");
     background-repeat: no-repeat;
@@ -168,14 +189,50 @@
     width: 79%;
     height: 100%;
     background-position: right;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-avatar, .info-user, .don-cuoc {
+    margin: 0 10px; /* Để tạo khoảng cách giữa các phần tử */
+  }
+
+  /* Đảm bảo các phần tử không bị co lại khi chúng không đủ chiều rộng */
+  .container-avatar, .info-user, .don-cuoc {
+  flex: 0 0 auto;
+  }
+
+  /* Đảm bảo các phần tử sẽ được sắp xếp từ trái sang phải */
+  .container-avatar, .info-user, .don-cuoc {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-user-img {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 56px;
+    top: 17px;
+  }
+
+  .username-container {
+    transform:translateX(61px)
   }
   
-  .container-image-left {
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    position: relative;
+  .user-name {
+    font-weight: bold; /* Để làm đậm */
+    font-size: 35px; /* Để đặt kích thước văn bản */
+    margin-bottom: 20px; /* Tạo khoảng cách giữa username và các ảnh */
   }
+
   
   .container-image {
     width: 100%;
@@ -183,15 +240,22 @@
     position: relative;
   }
   
-  .container-left {
-    display: flex;
-    justify-content: start;
+  .don-cuoc img {
+    width: 117%;
+    position: relative;
+    left: -30px;
+    top: -22px;/* Điều chỉnh giá trị này để di chuyển ảnh sang trái hoặc phải */
   }
   
   .container-right {
     display: flex;
     justify-content: end;
   }
+
+  .username-container {
+    margin-right: 10px; /* Tạo khoảng cách giữa username và ảnh */
+  }
+
   
   .image-left div {
     width: 70%;
@@ -205,17 +269,17 @@
   }
   
   .avatar {
-    width: 27%;
+    width: 51%;
   }
   
   .container-avatar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    padding-left: 10px;
+    transform: translateY(-47%);
+    padding-left: 5px;
   }
   
   .image-right {
@@ -241,12 +305,12 @@
   .image-center img {
     width: 100%; /* Kích thước ảnh theo chiều rộng */
     height: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
   }
   
-.text-image-left {
+.user-name {
     color: peachpuff;
     /* position: absolute;
     transform: translateX(-50%); */

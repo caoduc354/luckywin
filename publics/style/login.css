@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Averta';
+    src: url(../fonts/AvertaStdCY-Thin.otf) format('opentype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url(../fonts/AvertaStdCY-Light.otf) format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url(../fonts/AvertaStdCY-Regular.otf) format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url(../fonts/AvertaStdCY-Bold.otf) format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url(../fonts/AvertaStdCY-Semibold.otf) format('opentype');
+    font-weight: 600;
+}
+
+* {
+    font-family: "Averta";
+    font-weight: normal;
+}
+
+.login-container {
+    top: 5428px;
+    left: -9108px;
+    border-radius: 50px;
+    width: 960px;
+    height: 534px;
+    background-color: #E6E8EC;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title-login {
+    background-image: url("../images/background-login.jpg");
+    text-align: center;
+    width: 960px;
+    height: 160px;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 26px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#FCFCFD;
+}
+
+a {
+    margin-top: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-button .register-button .link {
+    margin-top: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Hover state styles */
+.login-button:hover button {
+    background-color: #1A3E9C;
+}
+
+.register-button:hover button {
+    background-color: #1A3E9C;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.login-button button {
+    background-color: #1D57EC;
+    width: 800px;
+    height: 82px;
+    top: 198px;
+    left: 80px;
+    padding: 24px, 0px, 24px, 0px;
+    border-radius: 48px;
+    border: 0px;
+    color: white;
+}
+
+.register-button button {
+    background-color: white;
+    width: 800px;
+    height: 82px;
+    top: 328px;
+    left: 80px;
+    padding: 24px, 0px, 24px, 0px;
+    border-radius: 48px;
+    border: 1px;
+    color: black;
+}
+
+.link {
+    width: 101px;
+    height: 34px;
+    top: 437px;
+    left: 426px;
+    color: #1D57EC;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.register-button button {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0F1A2A;
+    text-decoration: none;
+}
+
+.login-button button{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCFCFD;
+    text-decoration: none;
+}
+
+/* .button-container button a {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+} */

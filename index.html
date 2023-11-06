@@ -23,6 +23,10 @@
 <body>
 <img src="./publics/images/background.png" class="loading"/>
 <div id="main">
+    <div class="xoay-ngang">
+        <img src="./publics/images/rotate.gif" />
+            <p>Xoay ngang để có trải nghiệm tốt nhất</p>
+    </div>
     <header class="header">
         <div class="content">
             <div class="btn-hoat-dong" style="opacity: 0; cursor: default;">
@@ -34,15 +38,15 @@
 
             <div class="button-cskh">
                 <div class="btn-cskh">
-                    
+
                         <img onclick="openModal()" src="./publics/images/cskh2.png" width="100%" alt="cskh" style="margin-top: -13px;">
-                   
+
                 </div>
 
                 <div class="btn-hoat-dong">
-                   
+
                         <img  onclick="openModal()"  src="./publics/images/hoat-dong-header.png" width="100%" alt="" style="margin-top: -15px;">
-                  
+
                 </div>
             </div>
         </div>
@@ -120,10 +124,8 @@
             </div>
 
             <div style="width: 100%; position: relative;">
-                <div class="card" id="someDiv" onclick="openModal()" >
-                   
+                <div class="card" id="someDiv"  onclick="openModal()" >
                         <img src="./publics/images/card/taixiu-md5.gif" class="card-item"  onclick="openModal()"  />
-                  
                         <img src="./publics/images/card/tai.gif" class="card-item"  onclick="openModal()"  />
                         <img src="./publics/images/card/xocdia.gif" class="card-item"  onclick="openModal()"  />
                         <img src="./publics/images/card/1.gif" class="card-item"  onclick="openModal()"  />
@@ -204,7 +206,7 @@
         </div>
     </div>
 </div>
-    
+
 
 </div>
 </div>
@@ -214,7 +216,7 @@
     try {
         screen.orientation.lock('landscape');
     }catch (e) {
-        
+
     }
 
     document.getElementById('closeModal').onclick = () => {
@@ -227,36 +229,69 @@
         document.getElementById('modal').style.display = "flex";
 
     }
-    
-  
 
-    var clicked = false, base = 0;
 
-    $('#someDiv').on({
-        mousemove: function (e) {
-            clicked && function (xAxis) {
-                var _this = $(this);
-                if (base > xAxis) {
-                    base = xAxis;
-                    _this.css('left', '-=30px');
-                }
-                if (base < xAxis) {
-                    base = xAxis;
-                    _this.css('left', '+=30px');
-                }
-            }.call($(this), e.pageX);
-        },
-        mousedown: function (e) {
-            clicked = true;
-            
-            base = e.pageX;
-        },
-        mouseup: function (e) {
-            clicked = false;
-            
-            base = 0;
+    touchScroll("#someDiv");
+
+    function touchScroll($bind = "") {
+        const slider = document.querySelector($bind);
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("mousedown", (e) => {
+            isDown = true;
+            slider.classList.add("active");
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            cancelMomentumTracking();
+        });
+
+        slider.addEventListener("mouseleave", () => {
+            isDown = false;
+            slider.classList.remove("active");
+        });
+
+        slider.addEventListener("mouseup", () => {
+            isDown = false;
+            slider.classList.remove("active");
+            beginMomentumTracking();
+        });
+
+        slider.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            var prevScrollLeft = slider.scrollLeft;
+            slider.scrollLeft = scrollLeft - walk;
+            velX = slider.scrollLeft - prevScrollLeft;
+        });
+
+        slider.addEventListener("wheel", (e) => {
+            cancelMomentumTracking();
+        });
+
+        // 偵測動畫
+        var velX = 0;
+        var momentumID;
+
+        function beginMomentumTracking() {
+            cancelMomentumTracking();
+            momentumID = requestAnimationFrame(momentumLoop);
         }
-    });
+        function cancelMomentumTracking() {
+            cancelAnimationFrame(momentumID);
+        }
+        function momentumLoop() {
+            slider.scrollLeft += velX;
+            velX *= 0.95;
+            if (Math.abs(velX) > 0.5) {
+                momentumID = requestAnimationFrame(momentumLoop);
+            }
+        }
+    }
+
 
 
     $(document).ready(function () {

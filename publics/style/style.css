@@ -150,6 +150,12 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 10ms;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .card img {
@@ -162,7 +168,7 @@
     pointer-events: none;
 }
 
-.card a{
+.card a {
     pointer-events: none;
 }
 
@@ -197,36 +203,6 @@
 
 }
 
-@media screen and (max-width: 1200px) {
-    .image-left {
-        transform: scale(0.45);
-        width: 129%!important;
-    }
-
-    .image-center {
-        width: unset!important;
-    }
-    .image-center img {
-        transform: scale(0.6);
-        transform-origin: bottom right;
-    }
-
-    .notification marquee {
-        font-size: 14px!important;
-    }
-
-    .content {
-        overflow-x: hidden;
-    }
-    .card {
-        margin-top: 3vh;
-        overflow-x: hidden;
-    }
-    .button-cskh {
-        transform: scale(0.45);
-        transform-origin: top right;
-    }
-}
 
 .container-avatar, .info-user, .don-cuoc {
     margin: 0 10px; /* Để tạo khoảng cách giữa các phần tử */
@@ -420,8 +396,6 @@
 }
 
 .login-container {
-    top: 5428px;
-    left: -9108px;
     border-radius: 50px;
     width: 960px;
     height: 534px;
@@ -429,6 +403,7 @@
     margin: 0 auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .title-login {
     background-image: url("../images/background-login.jpg");
@@ -447,7 +422,7 @@ h2 {
     line-height: 50px;
     letter-spacing: 0em;
     text-align: center;
-    color:#FCFCFD;
+    color: #FCFCFD;
 }
 
 a {
@@ -527,7 +502,7 @@ a {
     text-decoration: none;
 }
 
-.login-button button{
+.login-button button {
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
@@ -569,4 +544,107 @@ a {
 
 .modal .login-container {
     z-index: 2;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .container-avatar {
+        top: 0;
+    }
+
+    .info-user-img {
+        top: 0;
+    }
+
+    .don-cuoc img {
+        top: -52px;
+    }
+
+    .image-left {
+        transform: scale(0.45);
+        width: 127% !important;
+    }
+
+    .image-center {
+        width: unset !important;
+    }
+
+    .image-center img {
+        transform: scale(0.6);
+        transform-origin: bottom right;
+    }
+
+    .notification marquee {
+        font-size: 14px !important;
+    }
+
+    .content {
+        overflow-x: hidden;
+    }
+
+    .card {
+        margin-top: 3vh;
+        overflow-x: auto;
+    }
+
+    .button-cskh {
+        transform: scale(0.45);
+        transform-origin: top right;
+    }
+
+    .login-container {
+        transform: scale(0.5);
+    }
+
+    .notification {
+        margin-top: 5px;
+    }
+
+    .notification img:first-child {
+        transform: scale(0.8);
+    }
+
+    .notification marquee {
+        margin-top: 5px;
+    }
+
+    .container-right {
+        transform-origin: right bottom;
+    }
+
+    .item-nav-content a {
+        margin-top: 2px;
+    }
+
+}
+
+.xoay-ngang {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .xoay-ngang {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 999;
+        color: white;
+    }
+
+    .xoay-ngang img {
+        width: 60vw;
+    }
+
+    .xoay-ngang p {
+        font-size: 24px;
+    }
 }

@@ -131,7 +131,7 @@
                         <img src="./publics/images/card/1.gif" class="card-item"  onclick="openModal()"  />
                         <img src="./publics/images/card/3.gif" class="card-item"  onclick="openModal()"  />
                         <img src="./publics/images/card/4.gif" class="card-item"  onclick="openModal()"  />
-                        <img src="./publics/images/card/5.gif" class="card-item" style="margin-right: 1500px;"  onclick="openModal()"  />
+                        <img src="./publics/images/card/5.gif" class="card-item"   onclick="openModal()"  />
                 </div>
             </div>
 
@@ -141,57 +141,33 @@
 
     </main>
 
-    <div class="footer">
-        <div class="container-image-left">
-            <div class="image-left">
-                <div class="container-avatar">
-                    <a href="#">
-                        <img
-                                class="avatar"
-                                src="./publics/images/avatar.png"
-                                alt="avatar"
-                        />
-                    </a>
-                </div>
-                <div class="info-user">
-                    <div class="username-container">
-                        <label class="user-name"> vuhoang025 </label>
-                    </div>
-                    <div class="info-user-img" style="position:relative;">
-                        <img src="./publics/images/xu.png" alt="dongxu">
-                        <img src="./publics/images/o xu.png" alt="oxu">
-                        <span style="color: gold; font-size: 25px; position:absolute; font-weight: bold; left: 50%;">0</span>
-                    </div>
-                </div>
-                <div class="don-cuoc">
-                    <a href="#">
-                        <img src="./publics/images/don-cuoc.png" class=".don-cuoc img" alt="doncuoc">
-                    </a>
-                </div>
-            </div>
+    <div class="footer-mobile">
+        <div class="container-left">
+                <img class="cad_avatar" src="./publics/images/avatar.png" alt="avatar"  onclick="openModal()" >
+                <img src="./publics/images/xu.png" class="cad_xu"  onclick="openModal()" >
+                <img src="./publics/images/o xu.png" class="cad_xu_bg"  onclick="openModal()" >
+            <p class="cad_name"  onclick="openModal()" >vuhoang62</p>
+            <p class="cad_money"  onclick="openModal()" >9.999.999</p>
 
+            <img src="./publics/images/don-cuoc.png" class="cuoc" alt="doncuoc"  onclick="openModal()" >
         </div>
 
-        <div class="image-center">
-            <!-- <a href="#">       -->
-            <img src="./publics/images/jackpot.png" alt="jackpot" onclick="openModal()"/>
+        <div class="container-center">
+            <img src="/publics/images/jackpot.png" class="cad_jackpot" onclick="openModal()"  />
+        </div>
+
+        <div class="cad_container-right">
+            <!-- <a href="#">   -->
+            <img src="./publics/images/cai-dat.png" onclick="openModal()" class="cad_setting" alt="Cài đặt"  onclick="openModal()" />
             <!-- </a> -->
-        </div>
-
-        <div class="container-image container-right">
-            <div class="image-right">
-                <!-- <a href="#">   -->
-                <img src="./publics/images/cai-dat.png" onclick="openModal()" alt="Cài đặt"/>
-                <!-- </a> -->
-                <!-- <a href="#"> -->
-                <img src="./publics/images/nap-tien.png" alt="Nạp tiền" onclick="openModal()"/>
-                <!-- </a> -->
-                <!-- <a href="#"> -->
-                <img src="./publics/images/rut-tien.png" alt="Rút tiền" onclick="openModal()"/>
-                <!-- </a> -->
-            </div>
+            <!-- <a href="#"> -->
+            <img src="./publics/images/nap-tien.png" alt="Nạp tiền" class="cad_nap_tien" onclick="openModal()"  onclick="openModal()" />
+            <!-- </a> -->
+            <!-- <a href="#"> -->
+            <img src="./publics/images/rut-tien.png" alt="Rút tiền" class="cad_rut_tien" onclick="openModal()"  onclick="openModal()" />
         </div>
     </div>
+
 
 <div class="modal" id="modal" style="display: none;">
     <div class="bg " id="closeModal"></div>

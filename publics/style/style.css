@@ -617,6 +617,10 @@ a {
         margin-top: 2px;
     }
 
+    .footer {
+        display: none;
+    }
+
 }
 
 .xoay-ngang {
@@ -647,4 +651,130 @@ a {
     .xoay-ngang p {
         font-size: 24px;
     }
+}
+
+.footer-mobile {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+.footer-mobile .container-left {
+    background: url(/publics/images/jackpot-1.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+}
+
+.footer-mobile .container-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cad_jackpot {
+    position: absolute;
+    bottom: 0;
+    height: 108%;
+    width: 125%;
+    margin-left: -12%;
+}
+
+.footer-mobile .cad_container-right {
+    background: url(/publics/images/jackpot-2.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+}
+
+.footer-mobile .cuoc {
+    position: absolute;
+    right: 10%;
+    bottom: 38%;
+    height: 100%;
+    transform: scale(1.4);
+}
+
+.footer-mobile .profile {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-mobile .cad_avatar {
+    position: absolute;
+    height: 100%;
+}
+
+.cad_xu_bg {
+    position: absolute;
+    left: 19%;
+    bottom: 13%;
+    height: 50%;
+}
+
+.cad_xu {
+    position: absolute;
+    left: 23%;
+    bottom: 18%;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+}
+
+.cad_name {
+    position: absolute;
+    left: 22%;
+    z-index: 2;
+    color: peachpuff;
+    top: 5px;
+}
+
+@media screen and (min-width: 1023px){
+    .cad_name {
+        font-size: 48px;
+        left: 30%;
+        top: 6%;
+    }
+
+    .cad_money {
+        font-size: 48px;
+        left: 30%;
+        bottom: 22%;
+    }
+    .cad_xu {
+        width: 50px;
+        height: 50px;
+        bottom: 22%;
+    }
+}
+.cad_money {
+    position: absolute;
+    left: 31%;
+    bottom: 18%;
+    z-index: 2;
+    color: peachpuff;
+}
+.cad_container-right .cad_setting{
+    position: absolute;
+    height: 100%;
+    bottom: 28%;
+    transform: scale(1.3);
+    left: 8%;
+}
+.cad_container-right .cad_rut_tien{
+    position: absolute;
+    right: 4%;
+    height: 100%;
+    bottom: 28%;
+    transform: scale(1.2);
+}
+.cad_container-right .cad_nap_tien{
+    position: absolute;
+    right: 37%;
+    height: 100%;
+    bottom: 28%;
+    transform: scale(1.3);
 }
